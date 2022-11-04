@@ -14,6 +14,7 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import static com.google.common.base.Predicates.or;
+import static springfox.documentation.builders.PathSelectors.any;
 import static springfox.documentation.builders.PathSelectors.regex;
 
 /**
@@ -73,8 +74,9 @@ public class SwaggerConfig {
                 //加了ApiOperation注解的类，才生成接口文档
                 //.apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
                 //暴露接口地址的包路径（即此包下的类，才生成接口文档）
-                .apis(RequestHandlerSelectors.basePackage("com.example.controller"))
-                .paths(doFilteringRules())//自定义的过滤规则
+                .apis(RequestHandlerSelectors.basePackage("com.example"))
+                .paths(any())//自定义的过滤规则
+                //.paths(doFilteringRules())//自定义的过滤规则
                 .build();
     }
 
@@ -85,7 +87,8 @@ public class SwaggerConfig {
      */
     private Predicate<String> doFilteringRules() {
         return or(
-                regex("/user.*")
+                regex("/register.*")
+
         );
     }
 }

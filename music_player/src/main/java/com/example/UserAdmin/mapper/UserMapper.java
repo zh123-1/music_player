@@ -1,6 +1,6 @@
-package com.example.mapper;
+package com.example.UserAdmin.mapper;
 
-import com.example.pojo.User;
+import com.example.UserAdmin.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
 
 

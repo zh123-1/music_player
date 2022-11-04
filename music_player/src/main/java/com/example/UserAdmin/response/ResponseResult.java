@@ -1,4 +1,4 @@
-package com.example.response;
+package com.example.UserAdmin.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

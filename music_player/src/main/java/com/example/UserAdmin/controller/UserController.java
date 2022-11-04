@@ -1,8 +1,8 @@
-package com.example.controller;
+package com.example.UserAdmin.controller;
 
-import com.example.pojo.User;
-import com.example.response.ResponseResult;
-import com.example.service.UserService;
+import com.example.UserAdmin.pojo.User;
+import com.example.UserAdmin.response.ResponseResult;
+import com.example.UserAdmin.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/user")
 @Api(value = "API - UserController",description = "用户模块接口详情")
+
 public class UserController {
 
     @Autowired

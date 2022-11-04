@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.mapper.UserMapper">
-    <insert id="insert">
-        insert into user(name) values(#{name});
+<mapper namespace="com.example.register.mapper.RegisterMapper">
+    <insert id="registerInsert">
+        insert into user(name,account,password) values(#{name},#{account},#{password});
     </insert>
 </mapper>
